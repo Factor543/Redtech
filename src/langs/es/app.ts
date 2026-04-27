@@ -216,7 +216,7 @@ export default {
 		],
 		links: {
 			whatsapp: '+58 412-1582233',
-			email: 'diegoalberto.4002@gmail.com',
+			email: "diegoalberto.4002{'@'}gmail.com",
 			location: 'Caracas, Venezuela',
 		},
 	},
