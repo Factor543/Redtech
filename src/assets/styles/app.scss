@@ -1,10 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+	--red: #d62828;
+	--red-hover: #b51f1f;
+	--red-alpha: rgba(214, 40, 40, 0.1);
+	--red-border: rgba(214, 40, 40, 0.25);
+	--hero-bg: #0c0c0e;
+	--dark-section: #111114;
+	--dark-card: #18181c;
+	--dark-border: rgba(255, 255, 255, 0.06);
+	--light-bg: #fafafa;
+	--light-card: #ffffff;
+	--light-border: #e8e8ec;
+	--text-dark: #0c0c0e;
+	--text-muted: #5a5a6a;
+	--text-ghost: #9898a8;
+	--white: #fff;
+	--green: #16a34a;
+	--yellow: #d97706;
+	--radius: 16px;
+	--radius-sm: 10px;
+}
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-	min-height: 100vh;
+	font-family: 'DM Sans', sans-serif;
+	background: var(--white);
+	color: var(--text-dark);
+	overflow-x: hidden;
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Shared typography helpers used by multiple views */
+.s-title {
+	font-family: 'Sora', sans-serif;
+	font-size: clamp(30px, 4vw, 50px);
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.s-sub {
+	font-size: 17px;
+	color: var(--text-muted);
+}
+
+/* Shared interaction helpers */
+.reveal {
+	opacity: 0;
+	transform: translateY(28px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.reveal-delay-1 {
+	transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+	transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+	transition-delay: 0.3s;
+}
+
+.btn-red,
+.btn-outline,
+.btn-white {
+	display: inline-flex;
+	align-items: center;
+	padding: 15px 28px;
+	border-radius: var(--radius-sm);
+	font-family: 'Sora', sans-serif;
+	font-weight: 700;
+}
+.btn-red {
+	background: var(--red);
+	color: var(--white);
+}
+.btn-outline {
+	border: 1px solid #3a3a40;
+	color: #bbb;
 }
