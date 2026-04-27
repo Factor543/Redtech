@@ -8,29 +8,28 @@
 			<div class="hero-inner">
 				<div class="hero-pill">
 					<div class="dot" />
-					<span>AUTOMATIZACIÓN CON IA PARA NEGOCIOS REALES</span>
+					<span>{{ $t('_Home.hero.pill') }}</span>
 				</div>
-				<h1>Tu negocio<br><em>trabaja solo</em>.<br>Tú <u>descansas</u>.</h1>
+				<h1>{{ $t('_Home.hero._title.0') }}<br><em>{{ $t('_Home.hero._title.1') }}</em>.<br>{{ $t('_Home.hero._title.2') }} <u>{{ $t('_Home.hero._title.3') }}</u>.</h1>
 				<p class="hero-lead">
-					Diseñamos sistemas con inteligencia artificial que atienden clientes, cierran ventas,
-					coordinan citas y gestionan procesos — funcionando 24/7 sin que tengas que intervenir.
+					{{ $t('_Home.hero.lead') }}
 				</p>
 				<div class="hero-actions">
-					<RouterLink class="btn-red" to="/contact">Ver cómo funciona</RouterLink>
-					<RouterLink class="btn-outline" to="/pricing">Conocer los planes</RouterLink>
+					<RouterLink class="btn-red" to="/contact">{{ $t('_Home.hero.cta_primary') }}</RouterLink>
+					<RouterLink class="btn-outline" to="/pricing">{{ $t('_Home.hero.cta_secondary') }}</RouterLink>
 				</div>
 				<div class="hero-stats">
 					<div class="h-stat">
-						<div class="val"><b>&lt;5</b> seg</div>
-						<div class="lbl">Tiempo de respuesta a tus clientes</div>
+						<div class="val">{{ $t('_Home.hero.stats.0.value') }}</div>
+						<div class="lbl">{{ $t('_Home.hero.stats.0.label') }}</div>
 					</div>
 					<div class="h-stat">
-						<div class="val"><b>24</b>/7</div>
-						<div class="lbl">Tu negocio atendiendo sin parar</div>
+						<div class="val">{{ $t('_Home.hero.stats.1.value') }}</div>
+						<div class="lbl">{{ $t('_Home.hero.stats.1.label') }}</div>
 					</div>
 					<div class="h-stat">
-						<div class="val"><b>7</b> días</div>
-						<div class="lbl">De cero a sistema funcionando</div>
+						<div class="val">{{ $t('_Home.hero.stats.2.value') }}</div>
+						<div class="lbl">{{ $t('_Home.hero.stats.2.label') }}</div>
 					</div>
 				</div>
 			</div>
@@ -40,66 +39,41 @@
 			<div class="ia-highlight-inner">
 				<div class="ia-badge reveal">
 					<div class="ia-badge-icon">✦</div>
-					<span>Potenciado con Inteligencia Artificial</span>
+					<span>{{ $t('_Home.ia.badge') }}</span>
 				</div>
-				<h2 class="reveal">No es un bot de menús.<br>Es <em>inteligencia real</em> operando tu negocio.</h2>
+				<h2 class="reveal">{{ $t('_Home.ia._title.0') }}<br>{{ $t('_Home.ia._title.1') }}</h2>
 				<p class="reveal reveal-delay-1">
-					Un sistema RedTech entiende el lenguaje de tus clientes, razona, adapta su respuesta y
-					toma decisiones — igual que lo haría un empleado capacitado, pero sin descansos ni
-					errores.
+					{{ $t('_Home.ia.description') }}
 				</p>
 				<div class="ia-features-mini reveal reveal-delay-2">
-					<div class="ia-feat-mini"><span class="icon">🧠</span><span>Lenguaje natural real</span></div>
-					<div class="ia-feat-mini"><span class="icon">🔗</span><span>16+ integraciones</span></div>
-					<div class="ia-feat-mini"><span class="icon">⚡</span><span>Respuesta en segundos</span></div>
-					<div class="ia-feat-mini"><span class="icon">🎯</span><span>Personalizado a tu negocio</span></div>
+					<div class="ia-feat-mini"><span class="icon">🧠</span><span>{{ $t('_Home.ia.features.0') }}</span></div>
+					<div class="ia-feat-mini"><span class="icon">🔗</span><span>{{ $t('_Home.ia.features.1') }}</span></div>
+					<div class="ia-feat-mini"><span class="icon">⚡</span><span>{{ $t('_Home.ia.features.2') }}</span></div>
+					<div class="ia-feat-mini"><span class="icon">🎯</span><span>{{ $t('_Home.ia.features.3') }}</span></div>
 				</div>
 			</div>
 		</section>
 
 		<section class="canales-section">
-			<div class="canales-label"><span>Se conecta con más de 16 herramientas y canales</span></div>
+			<div class="canales-label"><span>{{ $t('_Home.channels.label') }}</span></div>
 			<div class="carousel-wrapper">
 				<div class="carousel-track">
-					<div class="canal-item"><div class="canal-icon whatsapp">📱</div><div><h4>WhatsApp Business</h4><p>Atención directa</p></div></div>
-					<div class="canal-item"><div class="canal-icon instagram">📸</div><div><h4>Instagram DMs</h4><p>Redes sociales</p></div></div>
-					<div class="canal-item"><div class="canal-icon gmail">✉️</div><div><h4>Gmail</h4><p>Correo electrónico</p></div></div>
-					<div class="canal-item"><div class="canal-icon sheets">📊</div><div><h4>Google Sheets</h4><p>Hojas de cálculo</p></div></div>
-					<div class="canal-item"><div class="canal-icon calendar">📅</div><div><h4>Google Calendar</h4><p>Agendamiento</p></div></div>
-					<div class="canal-item"><div class="canal-icon slack">💬</div><div><h4>Slack</h4><p>Equipo interno</p></div></div>
-					<div class="canal-item"><div class="canal-icon notion">📝</div><div><h4>Notion</h4><p>Documentación</p></div></div>
-					<div class="canal-item"><div class="canal-icon telegram">✈️</div><div><h4>Telegram</h4><p>Mensajería alternativa</p></div></div>
-					<div class="canal-item"><div class="canal-icon trello">📋</div><div><h4>Trello</h4><p>Gestión de tareas</p></div></div>
-					<div class="canal-item"><div class="canal-icon drive">📁</div><div><h4>Google Drive</h4><p>Almacenamiento</p></div></div>
-					<div class="canal-item"><div class="canal-icon hubspot">🔶</div><div><h4>HubSpot</h4><p>CRM avanzado</p></div></div>
-					<div class="canal-item"><div class="canal-icon zapier">⚡</div><div><h4>Zapier</h4><p>Automatizaciones</p></div></div>
-					<div class="canal-item"><div class="canal-icon airtable">🗃️</div><div><h4>Airtable</h4><p>Base de datos</p></div></div>
-					<div class="canal-item"><div class="canal-icon monday">📊</div><div><h4>Monday</h4><p>Gestión de proyectos</p></div></div>
-					<div class="canal-item"><div class="canal-icon zoom">🎥</div><div><h4>Zoom</h4><p>Videollamadas</p></div></div>
-					<div class="canal-item"><div class="canal-icon messenger">💬</div><div><h4>Messenger</h4><p>Facebook DMs</p></div></div>
-					<div class="canal-item"><div class="canal-icon whatsapp">📱</div><div><h4>WhatsApp Business</h4><p>Atención directa</p></div></div>
-					<div class="canal-item"><div class="canal-icon instagram">📸</div><div><h4>Instagram DMs</h4><p>Redes sociales</p></div></div>
-					<div class="canal-item"><div class="canal-icon gmail">✉️</div><div><h4>Gmail</h4><p>Correo electrónico</p></div></div>
-					<div class="canal-item"><div class="canal-icon sheets">📊</div><div><h4>Google Sheets</h4><p>Hojas de cálculo</p></div></div>
-					<div class="canal-item"><div class="canal-icon calendar">📅</div><div><h4>Google Calendar</h4><p>Agendamiento</p></div></div>
-					<div class="canal-item"><div class="canal-icon slack">💬</div><div><h4>Slack</h4><p>Equipo interno</p></div></div>
-					<div class="canal-item"><div class="canal-icon notion">📝</div><div><h4>Notion</h4><p>Documentación</p></div></div>
-					<div class="canal-item"><div class="canal-icon telegram">✈️</div><div><h4>Telegram</h4><p>Mensajería alternativa</p></div></div>
-					<div class="canal-item"><div class="canal-icon trello">📋</div><div><h4>Trello</h4><p>Gestión de tareas</p></div></div>
-					<div class="canal-item"><div class="canal-icon drive">📁</div><div><h4>Google Drive</h4><p>Almacenamiento</p></div></div>
-					<div class="canal-item"><div class="canal-icon hubspot">🔶</div><div><h4>HubSpot</h4><p>CRM avanzado</p></div></div>
-					<div class="canal-item"><div class="canal-icon zapier">⚡</div><div><h4>Zapier</h4><p>Automatizaciones</p></div></div>
-					<div class="canal-item"><div class="canal-icon airtable">🗃️</div><div><h4>Airtable</h4><p>Base de datos</p></div></div>
-					<div class="canal-item"><div class="canal-icon monday">📊</div><div><h4>Monday</h4><p>Gestión de proyectos</p></div></div>
-					<div class="canal-item"><div class="canal-icon zoom">🎥</div><div><h4>Zoom</h4><p>Videollamadas</p></div></div>
-					<div class="canal-item"><div class="canal-icon messenger">💬</div><div><h4>Messenger</h4><p>Facebook DMs</p></div></div>
+					<template v-for="(_, repeatIndex) in [0, 1]" :key="repeatIndex">
+						<div v-for="(channel, index) in homeChannelItems" :key="`${repeatIndex}-${index}`" class="canal-item">
+							<div class="canal-icon" :class="channel.className">{{ channel.icon }}</div>
+							<div>
+								<h4>{{ channel.title }}</h4>
+								<p>{{ channel.description }}</p>
+							</div>
+						</div>
+					</template>
 				</div>
 			</div>
 		</section>
 
 		<section class="problema">
 			<div style="max-width: 1160px; margin: 0 auto">
-				<h2 class="s-title reveal">Cada hora que pierdes en tareas<br>repetitivas, es una hora que no creces.</h2>
+				<h2 class="s-title reveal">{{ $t('_Home.problem._title.0') }}<br>{{ $t('_Home.problem._title.1') }}</h2>
 			</div>
 			<div class="problema-grid">
 				<div>
@@ -108,32 +82,11 @@
 						atender, coordinar y además crecer. Eso tiene solución.
 					</p>
 					<div class="pain-list">
-						<div class="pain-row reveal">
-							<div class="pain-icon">📵</div>
+						<div v-for="(pain, index) in homePainItems" :key="index" class="pain-row reveal">
+							<div class="pain-icon">{{ pain.icon }}</div>
 							<div>
-								<h4>Mensajes sin respuesta</h4>
-								<p>Mientras atiendes a alguien, otro cliente escribe y espera. A veces demasiado. Y compra en otro lado.</p>
-							</div>
-						</div>
-						<div class="pain-row reveal reveal-delay-1">
-							<div class="pain-icon">🔁</div>
-							<div>
-								<h4>Las mismas preguntas, todos los días</h4>
-								<p>"¿Cuánto cuesta?" "¿Tienen disponible?" — preguntas que consumen horas que deberías invertir en crecer.</p>
-							</div>
-						</div>
-						<div class="pain-row reveal reveal-delay-2">
-							<div class="pain-icon">🗂️</div>
-							<div>
-								<h4>Caos administrativo</h4>
-								<p>Citas cruzadas, inventario desactualizado, seguimientos olvidados. Todo en la cabeza del dueño.</p>
-							</div>
-						</div>
-						<div class="pain-row reveal reveal-delay-3">
-							<div class="pain-icon">😓</div>
-							<div>
-								<h4>Trabajas en el negocio, no para el negocio</h4>
-								<p>El día se va apagando incendios. El negocio te consume en vez de darte libertad.</p>
+								<h4>{{ pain.title }}</h4>
+								<p>{{ pain.description }}</p>
 							</div>
 						</div>
 					</div>
@@ -142,131 +95,70 @@
 					<div class="chat-top">
 						<div class="chat-ava">👜</div>
 						<div>
-							<h5>Sistema RedTech · En vivo</h5>
+							<h5>{{ $t('_Home.problem.chat.title') }}</h5>
 							<div class="chat-status">
 								<div class="chat-status-dot" />
-								<p>Operando sin intervención humana</p>
+								<p>{{ $t('_Home.problem.chat.status') }}</p>
 							</div>
 						</div>
 					</div>
 					<div class="chat-msgs">
-						<div class="msg msg-in">Hola! tienen la cartera negra pequeña? cuánto cuesta?</div>
-						<div class="msg msg-out">¡Hola! Sí, la cartera negra mini está disponible a $38. ¿Te la reservo?</div>
-						<div class="msg-time">⚡ Respondido en 2 seg</div>
-						<div class="msg msg-in">Sí quiero! Me llamo Laura, pago por Zelle</div>
-						<div class="msg msg-out">Perfecto, Laura. Te envío los datos de Zelle. ¿Me confirmas tu dirección de envío?</div>
-						<div class="msg msg-in">Av. Principal 123, Caracas</div>
-						<div class="msg msg-out">
-							✅ ¡Pedido confirmado! Cartera negra mini · $38 · Envío a Av. Principal 123. La dueña
-							fue notificada automáticamente. ¡Gracias!
-						</div>
+						<div class="msg msg-in">{{ homeChatMessages[0] }}</div>
+						<div class="msg msg-out">{{ homeChatMessages[1] }}</div>
+						<div class="msg-time">⚡ {{ $t('_Home.problem.chat.responded') }}</div>
+						<div class="msg msg-in">{{ homeChatMessages[2] }}</div>
+						<div class="msg msg-out">{{ homeChatMessages[3] }}</div>
+						<div class="msg msg-in">{{ homeChatMessages[4] }}</div>
+						<div class="msg msg-out">✅ {{ homeChatMessages[5] }}</div>
 					</div>
-					<div class="chat-note">✦ Venta completa. La dueña no tocó el teléfono.</div>
+					<div class="chat-note">✦ {{ $t('_Home.problem.chat.note') }}</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="usos">
 			<div class="usos-header">
-				<h2 class="s-title reveal">Funciona para cualquier<br>tipo de negocio.</h2>
+				<h2 class="s-title reveal">{{ $t('_Home.uses._title.0') }}<br>{{ $t('_Home.uses._title.1') }}</h2>
 				<p class="s-sub reveal">
 					Si atiendes clientes, vendes algo o coordinas un equipo, RedTech puede automatizarlo.
 				</p>
 			</div>
 			<div class="usos-grid">
-				<div class="uso-card highlight reveal">
-					<div class="uso-emoji">🛍️</div>
-					<h4>Tiendas y comercios</h4>
-					<p>Ventas, inventario y seguimiento de pedidos automatizados desde cualquier canal.</p>
-					<span class="uso-badge u-activo">Activo</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-1">
-					<div class="uso-emoji">🍽️</div>
-					<h4>Restaurantes</h4>
-					<p>Pedidos, reservas, menú actualizado y notificaciones al equipo de cocina.</p>
-					<span class="uso-badge u-activo">Activo</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-2">
-					<div class="uso-emoji">💆</div>
-					<h4>Salud y bienestar</h4>
-					<p>Citas, recordatorios, historial de pacientes y seguimiento post-consulta.</p>
-					<span class="uso-badge u-activo">Activo</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-3">
-					<div class="uso-emoji">🎓</div>
-					<h4>Academias y educación</h4>
-					<p>Inscripciones, horarios, pagos y comunicación masiva con estudiantes.</p>
-					<span class="uso-badge u-activo">Activo</span>
-				</div>
-				<div class="uso-card reveal">
-					<div class="uso-emoji">🏗️</div>
-					<h4>Construcción y servicios</h4>
-					<p>Cotizaciones automáticas, agenda de visitas y coordinación de equipos en campo.</p>
-					<span class="uso-badge u-activo">Activo</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-1">
-					<div class="uso-emoji">🚗</div>
-					<h4>Automotriz</h4>
-					<p>Citas de taller, presupuestos y seguimiento de mantenimiento por cliente.</p>
-					<span class="uso-badge u-pronto">Próximamente</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-2">
-					<div class="uso-emoji">🏠</div>
-					<h4>Inmobiliaria</h4>
-					<p>Filtrado de prospectos, agendamiento de visitas y seguimiento del embudo de ventas.</p>
-					<span class="uso-badge u-pronto">Próximamente</span>
-				</div>
-				<div class="uso-card reveal reveal-delay-3">
-					<div class="uso-emoji">⚖️</div>
-					<h4>Servicios profesionales</h4>
-					<p>Gestión de agenda, recordatorios de citas y seguimiento de casos o proyectos.</p>
-					<span class="uso-badge u-pronto">Próximamente</span>
+				<div
+					v-for="(useCard, index) in homeUseCards"
+					:key="index"
+					class="uso-card reveal"
+					:class="{
+						highlight: index === 0,
+					}"
+				>
+					<div class="uso-emoji">{{ useCard.icon }}</div>
+					<h4>{{ useCard.title }}</h4>
+					<p>{{ useCard.description }}</p>
+					<span class="uso-badge" :class="useCard.statusClass">{{ useCard.status }}</span>
 				</div>
 			</div>
 		</section>
 
 		<section id="nosotros" class="mv">
-			<h2 class="s-title reveal">Por qué existe RedTech.</h2>
+			<h2 class="s-title reveal">{{ $t('_Home.about.title') }}</h2>
 			<div class="mv-cards">
 				<div class="mv-card reveal">
-					<div class="mv-label">Misión</div>
-					<h3>Devolverle el tiempo al dueño de negocio.</h3>
-					<p>
-						Creemos que los emprendedores no deberían pasar sus días respondiendo mensajes o
-						coordinando tareas repetitivas. Existen para crear, crecer y vivir. La tecnología debe
-						trabajar para ellos, no al revés.
-					</p>
+					<div class="mv-label">{{ $t('_Home.about.mission') }}</div>
+					<h3>{{ $t('_Home.about.mission_title') }}</h3>
+					<p>{{ $t('_Home.about.mission_description') }}</p>
 				</div>
 				<div class="mv-card reveal reveal-delay-1">
-					<div class="mv-label">Visión</div>
-					<h3>Que cada negocio en LATAM opere con IA.</h3>
-					<p>
-						Queremos ser el sistema operativo inteligente de los negocios latinoamericanos — desde
-						una carnicería en Caracas hasta una clínica en Bogotá. La automatización no debería ser
-						exclusiva de las grandes empresas.
-					</p>
+					<div class="mv-label">{{ $t('_Home.about.vision') }}</div>
+					<h3>{{ $t('_Home.about.vision_title') }}</h3>
+					<p>{{ $t('_Home.about.vision_description') }}</p>
 				</div>
 			</div>
 			<div class="valores">
-				<div class="valor-card reveal">
-					<div class="val-icon">⚡</div>
-					<h4>Velocidad real</h4>
-					<p>De conversación a sistema funcionando en 7 días, sin burocracia.</p>
-				</div>
-				<div class="valor-card reveal reveal-delay-1">
-					<div class="val-icon">🎯</div>
-					<h4>Sin tecnicismos</h4>
-					<p>El dueño no toca nada técnico. Nosotros construimos, tú ves los resultados.</p>
-				</div>
-				<div class="valor-card reveal reveal-delay-2">
-					<div class="val-icon">🌎</div>
-					<h4>Hecho para LATAM</h4>
-					<p>Diseñado para la realidad, el idioma y los canales que usa nuestro mercado.</p>
-				</div>
-				<div class="valor-card reveal reveal-delay-3">
-					<div class="val-icon">🤝</div>
-					<h4>Acompañamiento total</h4>
-					<p>No desaparecemos después de implementar. Seguimos disponibles para ajustar y mejorar.</p>
+				<div v-for="(valueItem, index) in homeValueItems" :key="index" class="valor-card reveal">
+					<div class="val-icon">{{ valueItem.icon }}</div>
+					<h4>{{ valueItem.title }}</h4>
+					<p>{{ valueItem.description }}</p>
 				</div>
 			</div>
 		</section>
@@ -274,8 +166,8 @@
 		<section class="latam-strip reveal">
 			<div class="latam-strip-inner">
 				<div class="latam-left">
-					<span class="latam-tag">🌎 Alcance regional</span>
-					<h3>Diseñado para Latinoamérica.<br>Operamos de forma <em>100% remota.</em></h3>
+					<span class="latam-tag">🌎 {{ $t('_Home.latam.tag') }}</span>
+					<h3>{{ $t('_Home.latam._title.0') }}<br>{{ $t('_Home.latam._title.1') }} <em>{{ $t('_Home.latam._title.2') }}</em></h3>
 				</div>
 				<div class="latam-flags">
 					<span>🇻🇪</span><span>🇨🇴</span><span>🇵🇪</span>
@@ -287,8 +179,65 @@
 </template>
 
 <script setup lang="ts">	
+import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import { useRevealOnMount } from '@/composables/useLandingEffects';
+
+const { t } = useI18n();
+
+const homeChannelItems = computed(() => [
+	{ className: 'whatsapp', icon: '📱', title: t('_Home.channels.items.0.0'), description: t('_Home.channels.items.0.1') },
+	{ className: 'instagram', icon: '📸', title: t('_Home.channels.items.1.0'), description: t('_Home.channels.items.1.1') },
+	{ className: 'gmail', icon: '✉️', title: t('_Home.channels.items.2.0'), description: t('_Home.channels.items.2.1') },
+	{ className: 'sheets', icon: '📊', title: t('_Home.channels.items.3.0'), description: t('_Home.channels.items.3.1') },
+	{ className: 'calendar', icon: '📅', title: t('_Home.channels.items.4.0'), description: t('_Home.channels.items.4.1') },
+	{ className: 'slack', icon: '💬', title: t('_Home.channels.items.5.0'), description: t('_Home.channels.items.5.1') },
+	{ className: 'notion', icon: '📝', title: t('_Home.channels.items.6.0'), description: t('_Home.channels.items.6.1') },
+	{ className: 'telegram', icon: '✈️', title: t('_Home.channels.items.7.0'), description: t('_Home.channels.items.7.1') },
+	{ className: 'trello', icon: '📋', title: t('_Home.channels.items.8.0'), description: t('_Home.channels.items.8.1') },
+	{ className: 'drive', icon: '📁', title: t('_Home.channels.items.9.0'), description: t('_Home.channels.items.9.1') },
+	{ className: 'hubspot', icon: '🔶', title: t('_Home.channels.items.10.0'), description: t('_Home.channels.items.10.1') },
+	{ className: 'zapier', icon: '⚡', title: t('_Home.channels.items.11.0'), description: t('_Home.channels.items.11.1') },
+	{ className: 'airtable', icon: '🗃️', title: t('_Home.channels.items.12.0'), description: t('_Home.channels.items.12.1') },
+	{ className: 'monday', icon: '📊', title: t('_Home.channels.items.13.0'), description: t('_Home.channels.items.13.1') },
+	{ className: 'zoom', icon: '🎥', title: t('_Home.channels.items.14.0'), description: t('_Home.channels.items.14.1') },
+	{ className: 'messenger', icon: '💬', title: t('_Home.channels.items.15.0'), description: t('_Home.channels.items.15.1') },
+]);
+
+const homePainItems = computed(() => [
+	{ icon: '📵', title: t('_Home.problem.pains.0.title'), description: t('_Home.problem.pains.0.description') },
+	{ icon: '🔁', title: t('_Home.problem.pains.1.title'), description: t('_Home.problem.pains.1.description') },
+	{ icon: '🗂️', title: t('_Home.problem.pains.2.title'), description: t('_Home.problem.pains.2.description') },
+	{ icon: '😓', title: t('_Home.problem.pains.3.title'), description: t('_Home.problem.pains.3.description') },
+]);
+
+const homeChatMessages = computed(() => [
+	t('_Home.problem.chat.messages.0'),
+	t('_Home.problem.chat.messages.1'),
+	t('_Home.problem.chat.messages.2'),
+	t('_Home.problem.chat.messages.3'),
+	t('_Home.problem.chat.messages.4'),
+	t('_Home.problem.chat.messages.5'),
+]);
+
+const homeUseCards = computed(() => [
+	{ icon: '🛍️', title: t('_Home.uses.cards.0.0'), description: t('_Home.uses.cards.0.1'), status: t('_Home.uses.cards.0.2'), statusClass: 'u-activo' },
+	{ icon: '🍽️', title: t('_Home.uses.cards.1.0'), description: t('_Home.uses.cards.1.1'), status: t('_Home.uses.cards.1.2'), statusClass: 'u-activo' },
+	{ icon: '💆', title: t('_Home.uses.cards.2.0'), description: t('_Home.uses.cards.2.1'), status: t('_Home.uses.cards.2.2'), statusClass: 'u-activo' },
+	{ icon: '🎓', title: t('_Home.uses.cards.3.0'), description: t('_Home.uses.cards.3.1'), status: t('_Home.uses.cards.3.2'), statusClass: 'u-activo' },
+	{ icon: '🏗️', title: t('_Home.uses.cards.4.0'), description: t('_Home.uses.cards.4.1'), status: t('_Home.uses.cards.4.2'), statusClass: 'u-activo' },
+	{ icon: '🚗', title: t('_Home.uses.cards.5.0'), description: t('_Home.uses.cards.5.1'), status: t('_Home.uses.cards.5.2'), statusClass: 'u-pronto' },
+	{ icon: '🏠', title: t('_Home.uses.cards.6.0'), description: t('_Home.uses.cards.6.1'), status: t('_Home.uses.cards.6.2'), statusClass: 'u-pronto' },
+	{ icon: '⚖️', title: t('_Home.uses.cards.7.0'), description: t('_Home.uses.cards.7.1'), status: t('_Home.uses.cards.7.2'), statusClass: 'u-pronto' },
+]);
+
+const homeValueItems = computed(() => [
+	{ icon: '⚡', title: t('_Home.about.values.0.0'), description: t('_Home.about.values.0.1') },
+	{ icon: '🎯', title: t('_Home.about.values.1.0'), description: t('_Home.about.values.1.1') },
+	{ icon: '🌎', title: t('_Home.about.values.2.0'), description: t('_Home.about.values.2.1') },
+	{ icon: '🤝', title: t('_Home.about.values.3.0'), description: t('_Home.about.values.3.1') },
+]);
 
 useRevealOnMount();
 </script>

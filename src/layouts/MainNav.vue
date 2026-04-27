@@ -4,16 +4,16 @@
 			<span class="red">Red</span><span class="tech">Tech</span>
 		</RouterLink>
 		<div class="nav-links">
-			<RouterLink to="/" active-class="nav-active" exact-active-class="nav-active">Inicio</RouterLink>
-			<RouterLink to="/services" active-class="nav-active">Servicios</RouterLink>
-			<RouterLink to="/pricing" active-class="nav-active">Precios</RouterLink>
-			<RouterLink to="/testimonials" active-class="nav-active">Testimonios</RouterLink>
-			<RouterLink to="/contact" class="nav-btn">Agendar llamada</RouterLink>
+			<RouterLink to="/" active-class="nav-active" exact-active-class="nav-active">{{ $t('_MainNav.home') }}</RouterLink>
+			<RouterLink to="/services" active-class="nav-active">{{ $t('_MainNav.services') }}</RouterLink>
+			<RouterLink to="/pricing" active-class="nav-active">{{ $t('_MainNav.pricing') }}</RouterLink>
+			<RouterLink to="/testimonials" active-class="nav-active">{{ $t('_MainNav.testimonials') }}</RouterLink>
+			<RouterLink to="/contact" class="nav-btn">{{ $t('_MainNav.contact') }}</RouterLink>
 		</div>
 		<button
 			id="hamburger"
 			class="nav-hamburger"
-			aria-label="Abrir menú"
+			:aria-label="$t('_MainNav.open_menu')"
 			type="button"
 			@click="isMobileOpen = !isMobileOpen"
 		>
@@ -24,11 +24,11 @@
 	</nav>
 
 	<div id="mobileMenu" class="mobile-menu" :class="{ open: isMobileOpen }">
-		<RouterLink to="/" active-class="nav-active" exact-active-class="nav-active" @click="isMobileOpen = false">Inicio</RouterLink>
-		<RouterLink to="/services" active-class="nav-active" @click="isMobileOpen = false">Servicios</RouterLink>
-		<RouterLink to="/pricing" active-class="nav-active" @click="isMobileOpen = false">Precios</RouterLink>
-		<RouterLink to="/testimonials" active-class="nav-active" @click="isMobileOpen = false">Testimonios</RouterLink>
-		<RouterLink to="/contact" class="nav-btn" @click="isMobileOpen = false">Agendar llamada</RouterLink>
+		<RouterLink to="/" active-class="nav-active" exact-active-class="nav-active" @click="isMobileOpen = false">{{ $t('_MainNav.home') }}</RouterLink>
+		<RouterLink to="/services" active-class="nav-active" @click="isMobileOpen = false">{{ $t('_MainNav.services') }}</RouterLink>
+		<RouterLink to="/pricing" active-class="nav-active" @click="isMobileOpen = false">{{ $t('_MainNav.pricing') }}</RouterLink>
+		<RouterLink to="/testimonials" active-class="nav-active" @click="isMobileOpen = false">{{ $t('_MainNav.testimonials') }}</RouterLink>
+		<RouterLink to="/contact" class="nav-btn" @click="isMobileOpen = false">{{ $t('_MainNav.contact') }}</RouterLink>
 	</div>
 </template>
 

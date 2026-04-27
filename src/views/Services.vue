@@ -2,66 +2,29 @@
 	<main>
 		<section class="servicios" style="padding-top: 140px">
 			<h2 class="s-title reveal" style="color: var(--white); max-width: 720px">
-				No automatizamos tecnología.<br>Automatizamos <em style="font-style: normal; color: var(--red)">tu operación.</em>
+				{{ $t('_Services.hero._title.0') }}<br><em style="font-style: normal; color: var(--red)">{{ $t('_Services.hero._title.1') }}</em>
 			</h2>
 			<p class="s-sub reveal" style="margin-top: 14px; color: #808090">
-				Diseñamos el sistema exacto que tu negocio necesita — desde atender clientes hasta coordinar tu equipo interno.
+				{{ $t('_Services.hero.description') }}
 			</p>
 
 			<div class="srv-cats reveal service-categories">
-				<div class="srv-cat service-category active" data-filter="all">Todos</div>
-				<div class="srv-cat service-category" data-filter="atencion">Atención al cliente</div>
-				<div class="srv-cat service-category" data-filter="ventas">Ventas</div>
-				<div class="srv-cat service-category" data-filter="admin">Administración</div>
-				<div class="srv-cat service-category" data-filter="crm">CRM</div>
-				<div class="srv-cat service-category" data-filter="operaciones">Operaciones</div>
+				<div
+					v-for="(category, index) in serviceCategories"
+					:key="category.filter"
+					class="srv-cat service-category"
+					:class="{ active: index === 0 }"
+					:data-filter="category.filter"
+				>
+					{{ category.label }}
+				</div>
 			</div>
 
 			<div class="srv-grid service-grid">
-				<div class="srv-card service-card" data-category="atencion">
-					<div class="srv-icon">⚡</div>
-					<h3>Atención instantánea</h3>
-					<p>Cualquier consulta recibe respuesta en segundos — cualquier hora, cualquier día. El sistema entiende lenguaje natural y responde con el tono de tu negocio.</p>
-				</div>
-				<div class="srv-card service-card" data-category="ventas">
-					<div class="srv-icon">📋</div>
-					<h3>Cotizaciones automáticas</h3>
-					<p>Tu cliente pide un presupuesto y lo recibe en minutos, calculado y formateado según tus tarifas. Sin esperas, sin errores manuales.</p>
-				</div>
-				<div class="srv-card service-card" data-category="admin">
-					<div class="srv-icon">📅</div>
-					<h3>Agendamiento inteligente</h3>
-					<p>Tus clientes agendan, reagendan o cancelan solos. El sistema actualiza tu calendario y manda recordatorios automáticos antes de cada cita.</p>
-				</div>
-				<div class="srv-card service-card" data-category="ventas">
-					<div class="srv-icon">🛍️</div>
-					<h3>Cierre de ventas completo</h3>
-					<p>Desde el primer interés hasta el pago — el sistema guía la conversación, verifica disponibilidad de stock y confirma el pedido sin que toques el teléfono.</p>
-				</div>
-				<div class="srv-card service-card" data-category="crm">
-					<div class="srv-icon">🗂️</div>
-					<h3>CRM automático</h3>
-					<p>Cada cliente queda registrado con su historial completo, preferencias y última interacción. El sistema hace seguimiento solo, sin que tengas que recordarlo.</p>
-				</div>
-				<div class="srv-card service-card" data-category="operaciones">
-					<div class="srv-icon">📦</div>
-					<h3>Control de inventario</h3>
-					<p>Tu inventario se actualiza con cada venta. Recibe alertas cuando algo se agota y gestiona listas de espera por producto automáticamente.</p>
-				</div>
-				<div class="srv-card service-card" data-category="admin">
-					<div class="srv-icon">📊</div>
-					<h3>Reportes y métricas</h3>
-					<p>Cuántos mensajes, ventas, citas y tiempos de respuesta — todo medido y resumido diariamente sin que tengas que abrir una hoja de cálculo.</p>
-				</div>
-				<div class="srv-card service-card" data-category="operaciones">
-					<div class="srv-icon">🔔</div>
-					<h3>Notificaciones inteligentes</h3>
-					<p>Alertas automáticas para ti y tu equipo: nuevas ventas, citas, clientes esperando respuesta, stock bajo, tareas pendientes.</p>
-				</div>
-				<div class="srv-card service-card" data-category="atencion">
-					<div class="srv-icon">🧠</div>
-					<h3>IA para casos complejos</h3>
-					<p>Cuando la conversación requiere razonamiento avanzado, el sistema usa IA para generar respuestas precisas — y avisa al dueño si detecta algo que necesita atención humana.</p>
+				<div v-for="(card, index) in serviceCards" :key="index" class="srv-card service-card" :data-category="card.category">
+					<div class="srv-icon">{{ card.icon }}</div>
+					<h3>{{ card.title }}</h3>
+					<p>{{ card.description }}</p>
 				</div>
 			</div>
 		</section>
@@ -229,8 +192,33 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import { useRevealOnMount, useServiceFilter } from '@/composables/useLandingEffects';
+
+const { t } = useI18n();
+
+const serviceCategories = computed(() => [
+	{ filter: 'all', label: t('_Services.hero.categories.0') },
+	{ filter: 'atencion', label: t('_Services.hero.categories.1') },
+	{ filter: 'ventas', label: t('_Services.hero.categories.2') },
+	{ filter: 'admin', label: t('_Services.hero.categories.3') },
+	{ filter: 'crm', label: t('_Services.hero.categories.4') },
+	{ filter: 'operaciones', label: t('_Services.hero.categories.5') },
+]);
+
+const serviceCards = computed(() => [
+	{ category: 'atencion', icon: '⚡', title: t('_Services.hero.cards.0.0'), description: t('_Services.hero.cards.0.1') },
+	{ category: 'ventas', icon: '📋', title: t('_Services.hero.cards.1.0'), description: t('_Services.hero.cards.1.1') },
+	{ category: 'admin', icon: '📅', title: t('_Services.hero.cards.2.0'), description: t('_Services.hero.cards.2.1') },
+	{ category: 'ventas', icon: '🛍️', title: t('_Services.hero.cards.3.0'), description: t('_Services.hero.cards.3.1') },
+	{ category: 'crm', icon: '🗂️', title: t('_Services.hero.cards.4.0'), description: t('_Services.hero.cards.4.1') },
+	{ category: 'operaciones', icon: '📦', title: t('_Services.hero.cards.5.0'), description: t('_Services.hero.cards.5.1') },
+	{ category: 'admin', icon: '📊', title: t('_Services.hero.cards.6.0'), description: t('_Services.hero.cards.6.1') },
+	{ category: 'operaciones', icon: '🔔', title: t('_Services.hero.cards.7.0'), description: t('_Services.hero.cards.7.1') },
+	{ category: 'atencion', icon: '🧠', title: t('_Services.hero.cards.8.0'), description: t('_Services.hero.cards.8.1') },
+]);
 
 useRevealOnMount();
 useServiceFilter();

@@ -2,11 +2,11 @@
 	<main>
 		<section class="planes" style="padding-top: 140px">
 			<div class="planes-header">
-				<h2 class="s-title reveal">Un sistema a la medida<br>de tu operación.</h2>
+				<h2 class="s-title reveal">{{ $t('_Pricing._title.0') }}<br>{{ $t('_Pricing._title.1') }}</h2>
 			</div>
 
 			<div class="pricing-label-row reveal">
-				<p>📐 <span>El precio depende del tamaño de tu operación</span> — no pagás por lo que no usás.</p>
+				<p>📐 <span>{{ $t('_Pricing.label') }}</span> — {{ $t('_Pricing.sub_label') }}</p>
 			</div>
 
 			<div class="pricing-grid">
@@ -126,9 +126,9 @@
 		</section>
 
 		<section class="garantia">
-			<h2>30 días de garantía real.</h2>
-			<p>Si después de un mes completo no sentís que RedTech ahorró tiempo y ayudó a tu negocio a vender más — no pagás el mantenimiento. Sin letra chica.</p>
-			<a href="https://wa.me/584121582233" class="btn-white">Hablar con Diego</a>
+			<h2>{{ $t('_Pricing._guarantee.title') }}</h2>
+			<p>{{ $t('_Pricing._guarantee.description') }}</p>
+			<a href="https://wa.me/584121582233" class="btn-white">{{ $t('actions.talk_with_diego') }}</a>
 		</section>
 	</main>
 </template>

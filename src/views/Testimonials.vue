@@ -5,10 +5,10 @@
 				<div class="test-hero-inner">
 					<div class="hero-pill" style="margin-bottom: 28px">
 						<div class="dot" />
-						<span>RESULTADOS REALES</span>
+						<span>{{ $t('_Testimonials.pill') }}</span>
 					</div>
-					<h2 class="s-title reveal" style="color: var(--white)">Lo que dicen los negocios<br>que ya operan con IA.</h2>
-					<p class="s-sub reveal" style="margin: 14px auto 0; color: #606070">Desliza sobre las tarjetas para descubrir cada historia.</p>
+					<h2 class="s-title reveal" style="color: var(--white)">{{ $t('_Testimonials._title.0') }}<br>{{ $t('_Testimonials._title.1') }}</h2>
+					<p class="s-sub reveal" style="margin: 14px auto 0; color: #606070">{{ $t('_Testimonials.description') }}</p>
 				</div>
 			</div>
 
@@ -114,15 +114,15 @@
 				<div class="test-stats reveal">
 					<div class="test-stat">
 						<div class="val"><b>+40</b></div>
-						<div class="lbl">Negocios automatizados</div>
+						<div class="lbl">{{ $t('_Testimonials.stats.0') }}</div>
 					</div>
 					<div class="test-stat">
 						<div class="val"><b>98%</b></div>
-						<div class="lbl">Clientes satisfechos</div>
+						<div class="lbl">{{ $t('_Testimonials.stats.1') }}</div>
 					</div>
 					<div class="test-stat">
 						<div class="val"><b>2h+</b></div>
-						<div class="lbl">Ahorradas por dueño al día</div>
+						<div class="lbl">{{ $t('_Testimonials.stats.2') }}</div>
 					</div>
 				</div>
 			</div>

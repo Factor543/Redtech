@@ -4,33 +4,29 @@
 			<canvas id="cta-particles-canvas" />
 			<div id="cta-zone" class="cta-interactive-zone" />
 			<div class="cta-glow" />
-			<h2>¿Listo para que tu negocio<br><em>trabaje solo</em>?</h2>
-			<p>Una llamada de 20 minutos es suficiente para mostrarte cómo funciona. Sin compromiso, sin palabras técnicas.</p>
+			<h2>{{ $t('_Contact._title.0') }}<br><em>{{ $t('_Contact._title.1') }}</em></h2>
+			<p>{{ $t('_Contact.description') }}</p>
 			<div class="cta-btns">
-				<a href="https://wa.me/584121582233?text=Hola%20RedTech!%20Me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20funciona%20el%20sistema." class="btn-red">Escribir por WhatsApp</a>
-				<a href="mailto:diegoalberto.4002@gmail.com" class="btn-outline">Enviar un email</a>
+				<a href="https://wa.me/584121582233?text=Hola%20RedTech!%20Me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20funciona%20el%20sistema." class="btn-red">{{ $t('actions.write_whatsapp') }}</a>
+				<a href="mailto:diegoalberto.4002@gmail.com" class="btn-outline">{{ $t('actions.send_email') }}</a>
 			</div>
 		</section>
 
 		<section style="background: var(--dark-section); padding: 80px 56px">
 			<div class="contacto-cards">
-				<div class="contact-card reveal">
-					<div class="contact-icon">📱</div>
-					<h4>WhatsApp directo</h4>
-					<p>Escríbenos y te respondemos en minutos. Es la forma más rápida de empezar.</p>
-					<a href="https://wa.me/584121582233">+58 412-1582233</a>
-				</div>
-				<div class="contact-card reveal reveal-delay-1">
-					<div class="contact-icon">✉️</div>
-					<h4>Correo electrónico</h4>
-					<p>Para propuestas formales, preguntas detalladas o documentación del proyecto.</p>
-					<a href="mailto:diegoalberto.4002@gmail.com">diegoalberto.4002@gmail.com</a>
-				</div>
-				<div class="contact-card reveal reveal-delay-2">
-					<div class="contact-icon">📍</div>
-					<h4>Ubicación</h4>
-					<p>Basados en Caracas, Venezuela. Trabajamos con negocios en toda Latinoamérica de forma remota.</p>
-					<a href="#">Caracas, Venezuela</a>
+				<div
+					v-for="(card, index) in contactCards"
+					:key="card.href"
+					class="contact-card reveal"
+					:class="{
+						'reveal-delay-1': index === 1,
+						'reveal-delay-2': index === 2,
+					}"
+				>
+					<div class="contact-icon">{{ card.icon }}</div>
+					<h4>{{ card.title }}</h4>
+					<p>{{ card.description }}</p>
+					<a :href="card.href">{{ card.linkLabel }}</a>
 				</div>
 			</div>
 		</section>
@@ -38,7 +34,35 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useRevealOnMount } from '@/composables/useLandingEffects';
+
+const { t } = useI18n();
+
+const contactCards = computed(() => [
+	{
+		icon: '📱',
+		title: t('_Contact.cards.0.0'),
+		description: t('_Contact.cards.0.1'),
+		href: 'https://wa.me/584121582233',
+		linkLabel: t('_Contact.links.whatsapp'),
+	},
+	{
+		icon: '✉️',
+		title: t('_Contact.cards.1.0'),
+		description: t('_Contact.cards.1.1'),
+		href: 'mailto:diegoalberto.4002@gmail.com',
+		linkLabel: t('_Contact.links.email'),
+	},
+	{
+		icon: '📍',
+		title: t('_Contact.cards.2.0'),
+		description: t('_Contact.cards.2.1'),
+		href: '#',
+		linkLabel: t('_Contact.links.location'),
+	},
+]);
 
 useRevealOnMount();
 </script>

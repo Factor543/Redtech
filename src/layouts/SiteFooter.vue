@@ -2,34 +2,34 @@
 	<footer>
 		<div class="f-brand">
 			<div class="f-logo"><span class="red">Red</span><span class="tech">Tech</span></div>
-			<p>Automatización de operaciones para negocios que quieren crecer sin hacer todo manualmente. Diseñado para Latinoamérica.</p>
+			<p>{{ $t('_SiteFooter.description') }}</p>
 		</div>
 		<div class="f-col">
-			<h5>Servicios</h5>
-			<RouterLink to="/services">Atención al cliente</RouterLink>
-			<RouterLink to="/services">Automatización de ventas</RouterLink>
-			<RouterLink to="/services">Agendamiento</RouterLink>
-			<RouterLink to="/services">CRM automático</RouterLink>
-			<RouterLink to="/services">Procesos internos</RouterLink>
+			<h5>{{ $t('_SiteFooter.services') }}</h5>
+			<RouterLink to="/services">{{ $t('_SiteFooter._services.items.0') }}</RouterLink>
+			<RouterLink to="/services">{{ $t('_SiteFooter._services.items.1') }}</RouterLink>
+			<RouterLink to="/services">{{ $t('_SiteFooter._services.items.2') }}</RouterLink>
+			<RouterLink to="/services">{{ $t('_SiteFooter._services.items.3') }}</RouterLink>
+			<RouterLink to="/services">{{ $t('_SiteFooter._services.items.4') }}</RouterLink>
 		</div>
 		<div class="f-col">
-			<h5>Empresa</h5>
-			<RouterLink to="/services">Cómo funciona</RouterLink>
-			<RouterLink to="/">Misión y visión</RouterLink>
-			<RouterLink to="/pricing">Planes</RouterLink>
-			<RouterLink to="/testimonials">Testimonios</RouterLink>
-			<RouterLink to="/contact">Contacto</RouterLink>
+			<h5>{{ $t('_SiteFooter.company') }}</h5>
+			<RouterLink to="/services">{{ $t('_SiteFooter._company.items.0') }}</RouterLink>
+			<RouterLink to="/">{{ $t('_SiteFooter._company.items.1') }}</RouterLink>
+			<RouterLink to="/pricing">{{ $t('_SiteFooter._company.items.2') }}</RouterLink>
+			<RouterLink to="/testimonials">{{ $t('_SiteFooter._company.items.3') }}</RouterLink>
+			<RouterLink to="/contact">{{ $t('_SiteFooter._company.items.4') }}</RouterLink>
 		</div>
 		<div class="f-col">
-			<h5>Contacto</h5>
+			<h5>{{ $t('_SiteFooter.contact') }}</h5>
 			<p>Diego Ñañez</p>
 			<a href="https://wa.me/584121582233" class="red-link">+58 412-1582233</a>
 			<a href="mailto:diegoalberto.4002@gmail.com" class="red-link">diegoalberto.4002@gmail.com</a>
-			<p style="margin-top: 16px; font-size: 12px; color: #505058">Caracas, Venezuela · Atención regional</p>
+			<p style="margin-top: 16px; font-size: 12px; color: #505058">{{ $t('_SiteFooter.region') }}</p>
 		</div>
 		<div class="f-bottom">
-			<p>&copy; 2026 <span>Red</span>Tech. Todos los derechos reservados.</p>
-			<p>Hecho con <span>&hearts;</span> en Caracas, Venezuela</p>
+			<p>&copy; 2026 <span>Red</span>Tech. {{ $t('_SiteFooter.rights') }}</p>
+			<p>{{ $t('_SiteFooter.made_in', { heart: '♥' }) }}</p>
 		</div>
 	</footer>
 </template>
